@@ -2,12 +2,12 @@ import { Component, ViewChild } from '@angular/core';
 import { InfiniteScroll } from '@ionic/angular';
 
 @Component({
-	selector: 'app-about',
-	templateUrl: 'about.page.html',
-	styleUrls: ['about.page.scss']
+	selector: 'app-items',
+	templateUrl: 'items.page.html',
+	styleUrls: ['items.page.scss']
 })
 
-export class AboutPage {
+export class ItemsPage {
 
 	constructor (
 	) {

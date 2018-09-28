@@ -6,22 +6,27 @@
 
 <ion-content padding>
 
-	<ion-list>
-		<ion-item>
-			<ion-label position="stacked" color="">
-				Email
-			</ion-label>
-			<ion-input type="email"></ion-input>
-		</ion-item>
-		<ion-item>
-			<ion-label position="stacked" color="">
-				Password
-			</ion-label>
-			<ion-input type="password"></ion-input>
-		</ion-item>
-	</ion-list>
-	<ion-button fill="solid" color="primary" (click)="login()">
-		Login
-	</ion-button>		
+	<p>
+		This is explaination of the bugs "dynamic updated content needs to be wrapped in ngZone.run() in order to update".
+		<br/>
+		To see the results in the action, please <a style="cursor:pointer" (click)="showActionSheet()"><b>open action-sheet</b></a> to navigate to page of items by two ways:
+	</p>
+
+	<p>
+		- <b>First</b>: with NgZone.run() - make sure the running context code is current zone.
+		<br/>
+		With this context, you'll see the dynamic contents (title and items) are updated when the <b>ion-infinitie-scroll</b>'s event fired (when scroll to the bottom of the list)
+	</p>
+
+	<p>
+		- <b>Second</b>: direct/without NgZone.run() - the running context is context of action sheet (instead of current zone).
+		<br/>
+		With this context, you'll see the dynamic contents (title and items) are NOT updated when the <b>ion-infinitie-scroll</b>'s event fired (when scroll to the bottom of the list),
+		and you must click/double click into the items (content) to see the update.
+	</p>
+
+	<ion-button (click)="showActionSheet()">
+		Open the action-sheet
+	</ion-button>
 
 </ion-content>

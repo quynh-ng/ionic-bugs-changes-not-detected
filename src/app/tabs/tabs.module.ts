@@ -12,15 +12,15 @@ import { AboutPageModule } from '../about/about.module';
 import { HomePageModule } from '../home/home.module';
 
 @NgModule({
-  imports: [
-    IonicModule,
-    CommonModule,
-    FormsModule,
-    TabsPageRoutingModule,
-    HomePageModule,
-    AboutPageModule,
-    ContactPageModule
-  ],
-  declarations: [TabsPage]
+	imports: [
+		IonicModule,
+		CommonModule,
+		FormsModule,
+		TabsPageRoutingModule,
+		HomePageModule,
+		AboutPageModule,
+		ContactPageModule
+	],
+	declarations: [TabsPage]
 })
 export class TabsPageModule {}
