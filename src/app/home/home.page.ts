@@ -32,7 +32,7 @@ export class HomePage {
 					}
 				}
 			]
-		}).then(actionsheet => actionsheet.present());
+		}).then(async actionsheet => await actionsheet.present());
 	}
 
 }
